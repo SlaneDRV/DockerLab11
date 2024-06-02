@@ -25,8 +25,10 @@ docker-compose ps
 
 ## Nginx: 
 http://localhost:4001
+
 powinna zostać wyświetlona strona startowa Nginx z wynikiem połączenia z MySQL.
 
 ## phpMyAdmin: 
 http://localhost:6001
+
 interfejs phpMyAdmin do zarządzania bazą danych.
