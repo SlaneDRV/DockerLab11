@@ -11,7 +11,7 @@ services:
       - backend
 
   php:
-    image: php:7.4-fpm
+    build: .
     volumes:
       - ./www:/var/www/html
     networks:
