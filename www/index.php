@@ -1,19 +1,15 @@
 <?php
-echo "Default page served by Nginx";
-echo "<br>Revutski Dzmitry";
-
-$host = 'mysql'; 
-$username = 'user'; 
-$password = 'password'; 
+$host = 'mysql';
+$username = 'user';
+$secret_path = '/run/secrets/mysql_root_password';
+$password = file_get_contents($secret_path);
 $dbname = 'test_db';
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if ($mysqli->connect_error) {
-    die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+    die("Connection failed: " . $mysqli->connect_error);
 }
 
-echo "<br>Connected successfully to MySQL database using mysqli.";
-
-$mysqli->close();
+echo "Connected successfully to MySQL using mysqli with secrets.";
 ?>

@@ -20,10 +20,9 @@ services:
   mysql:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: test_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+    secrets:
+      - mysql_root_password
     networks:
       - backend
 
@@ -38,6 +37,10 @@ services:
     networks:
       - backend
 
+secrets:
+  mysql_root_password:
+    file: ./mysql_root_password.txt
+
 networks:
-  frontend:
   backend:
+    driver: bridge
