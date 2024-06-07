@@ -25,7 +25,6 @@ docker-compose ps
 
 ## Nginx: 
 http://localhost:4001
-
 <img width="529" alt="image" src="https://github.com/SlaneDRV/DockerLab11/assets/125742851/82865295-fe48-4d2f-8fd7-13cbd7195a60">
 
 
@@ -33,7 +32,6 @@ Strona startowa Nginx z wynikiem połączenia z MySQL.
 
 ## phpMyAdmin: 
 http://localhost:6001
-
 <img width="1440" alt="image" src="https://github.com/SlaneDRV/DockerLab11/assets/125742851/7f188da9-5981-494d-92ca-8b6293122828">
 
 
