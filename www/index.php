@@ -4,7 +4,7 @@ echo "<br>Revutski Dzmitry";
 
 $host = 'mysql'; 
 $username = 'user'; 
-$password = 'password'; 
+$password = file_get_contents('/run/secrets/mysql_user_password');
 $dbname = 'test_db';
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
